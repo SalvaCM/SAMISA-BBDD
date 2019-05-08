@@ -3,6 +3,8 @@ package conexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+import javax.swing.JOptionPane;
+
 
 public class ConexionBD {
 
@@ -21,9 +23,6 @@ public class ConexionBD {
 			{
 				Class.forName(driver);
 				conexion = DriverManager.getConnection(urlBBDD, username, password);
-				if(conexion != null){
-					System.out.println("Conexion establecida");
-				}
 			}
 				catch (Exception e) {		
 					System.out.println("Error de conexion" + e);
